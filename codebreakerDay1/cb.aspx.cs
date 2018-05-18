@@ -91,7 +91,7 @@ namespace codebreakerDay1
 
             Response.AppendHeader("content-disposition", "attachment; filename=" + fileName);
             Response.ContentType = "application/octet-stream";
-            Response.WriteFile(Server.MapPath("~/s/" + fileName));
+            Response.WriteFile(Server.MapPath("~/" + mode +"/" + fileName));
             Response.Flush();
             Response.End();
         }
